@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nascionalidade</title>
+</head>
+<body>
+    <h1>Sua Nascionalidade</h1>
+    Em que país você mora? <input type="text" name="nasc" id="nasc">
+    <input type="button" value="Buscar" onclick="saberPais()">
+    <div id = "caixa">
+
+    </div>
+
+    <script>
+        function saberPais(){
+            var nasci = document.querySelector("input#nasc")
+            var caixa = document.querySelector("div#caixa")
+            var pais = nasci.value
+            caixa.innerHTML = `Vivendo em ${pais}`
+
+            if(pais!= 'Brasil'){
+                caixa.innerHTML += `<p>Você é Estrangeiro</p>`
+            } else{
+                caixa.innerHTML += `<p>Você é Brasileiro</p>`
+            }
+        }
+    </script>
+</body>
+</html>
